@@ -63,5 +63,9 @@
   <project remote="pythonAI" revision="scarthgap" name="meta-python-ai"     path="sources/meta-python-ai"></project>
   <project remote="pythonAI" revision="scarthgap" name="meta-clang-revival" path="sources/meta-clang-revival"></project>
 
+  <!-- meta iot layer (for Azure SDK) -->
+  <remote name="IntelIOT" fetch="https://github.com/intel-iot-devkit"/>
+  <project remote="IntelIOT" revision="7e8ce5ed80fd950d09cb9f78ee039c3c35f2bcff" name="meta-iot-cloud" path="sources/meta-iot-cloud"></project>
+
   <!-- Hach HEC Platform - End -->
 </manifest>
