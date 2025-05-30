@@ -67,5 +67,9 @@
   <remote name="IntelIOT" fetch="https://github.com/intel-iot-devkit"/>
   <project remote="IntelIOT" revision="7e8ce5ed80fd950d09cb9f78ee039c3c35f2bcff" name="meta-iot-cloud" path="sources/meta-iot-cloud"></project>
 
+  <!-- meta rtlwifi layer (usb wifi support) -->
+  <remote name="rtlWifi" fetch="https://github.com/EmbeddedAndroid/"/>
+  <project remote="rtlWifi" revision="6cef327d783b36fcec52af4681ef49c9412a20d1" name="meta-rtlwifi" path="sources/meta-rtlwifi"></project>
+
   <!-- Hach HEC Platform - End -->
 </manifest>
