@@ -1,0 +1,1 @@
+Test commit for platform_yocto_manifest on release/2099.8.0.0 at 6007d00d-2936-461f-99e6-2d6b9e2a45a6
