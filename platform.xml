@@ -71,7 +71,7 @@
   <remote name="rtlWifi" fetch="https://github.com/EmbeddedAndroid"/>
   <project remote="rtlWifi" revision="6cef327d783b36fcec52af4681ef49c9412a20d1" name="meta-rtlwifi" path="sources/meta-rtlwifi"></project>
 
-  <!-- meta cycloneDX layer for SBOM generation -->
+  <!-- meta cycloneDX layer (CycloneDX compliant SBOMs), https://layers.openembedded.org/layerindex/branch/master/layer/meta-cyclonedx -->
   <remote name="cyclone"  fetch="https://github.com/iris-GmbH"/>
   <project remote="cyclone" revision="334bcf1e40d9f9f6e94a693037d895dadf704b59" name="meta-cyclonedx" path="sources/meta-cyclonedx" upstream="scarthgap"></project>
 
