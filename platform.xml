@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <!-- Original variscite Default XML content (https://raw.githubusercontent.com/varigit/variscite-bsp-platform/refs/heads/scarthgap/imx-6.6.23-2.0.0.xml) -->
-  <default revision="scarthgap" sync-j="8"/>
+  <!-- Original variscite Default XML content (https://raw.githubusercontent.com/varigit/variscite-bsp-platform/refs/heads/wrynose/imx-6.18.20-2.0.0.xml) -->
+  <default revision="wrynose" sync-j="8"/>
 
   <remote name="yp"          fetch="https://git.yoctoproject.org"/>
   <remote name="oe"          fetch="https://github.com/openembedded"/>
@@ -16,64 +16,69 @@
   <remote name="imx-support" fetch="https://github.com/nxp-imx-support"/>
 
   <remote name="sbabic"      fetch="https://github.com/sbabic"/>
+  <remote name="mender"      fetch="https://github.com/mendersoftware"/>
   <remote name="variscite"   fetch="https://github.com/varigit"/>
 
-  <project name="poky"                       path="sources/poky"                       remote="yp"          revision="02eacd385eca7aa9cf25aaaa61427aa9c126e0bc" upstream="scarthgap"/>
-  <project name="meta-openembedded"          path="sources/meta-openembedded"          remote="oe"          revision="a72010b414ee3d73888ac9cb4e310e8f05e13aea" upstream="scarthgap"/>
-  <project name="meta-clang"                 path="sources/meta-clang"                 remote="kraj"        revision="66414c17ae60e489bef9a97031323e92c247fbe1" upstream="scarthgap"/>
+  <project name="bitbake"                    path="sources/bitbake"                    remote="oe"          revision="fae9db3168dbff1b8c76fe9c6726a9687ff97514" upstream="2.18"/>
+  <project name="openembedded-core"          path="sources/openembedded-core"          remote="oe"          revision="f66b182e2ff431b624dfc3a506d25dc8f1fc6db2" upstream="wrynose"/>
+  <project name="meta-yocto"                 path="sources/meta-yocto"                 remote="yp"          revision="824795b885b25e074a2880fbcd54e1a6c875d47d" upstream="wrynose"/>
+  <project name="meta-openembedded"          path="sources/meta-openembedded"          remote="oe"          revision="af8b6d6b2f0b11595b0a0d5b82efa3129d52a628" upstream="wrynose"/>
+  <project name="meta-clang"                 path="sources/meta-clang"                 remote="kraj"        revision="ef0d22f21910a0c30c967eeb17d8f209806e2d81" upstream="wrynose"/>
 
-  <project name="meta-freescale"             path="sources/meta-freescale"             remote="community"   revision="41b923e59e048b9b2942ff737a4ddac386954c62" upstream="scarthgap"/>
-  <project name="meta-freescale-3rdparty"    path="sources/meta-freescale-3rdparty"    remote="community"   revision="8b61684f0b1ba8bacdf3a69d993445e9791d4932" upstream="scarthgap"/>
-  <project name="meta-freescale-distro"      path="sources/meta-freescale-distro"      remote="community"   revision="158cc55b6ee30d09957b380859dba52c0f6af68d" upstream="scarthgap"/>
+  <project name="meta-freescale"             path="sources/meta-freescale"             remote="community"   revision="fe38e65a09ccddf921a2ece98ac7af7b12df5183" upstream="wrynose"/>
+  <project name="meta-freescale-3rdparty"    path="sources/meta-freescale-3rdparty"    remote="community"   revision="26d8b36a72acf1458a2520e4e9f4d654a4ba77e4" upstream="wrynose"/>
+  <project name="meta-freescale-distro"      path="sources/meta-freescale-distro"      remote="community"   revision="4464f38b4aa618b5942f5e35dd25cff590f410a6" upstream="wrynose"/>
+  <project name="meta-freescale-ml"          path="sources/meta-freescale-ml"          remote="community"   revision="1330790bc6cdd3808260a16383d928e05a0e0eeb" upstream="wrynose"/>
 
-  <project name="meta-arm"                   path="sources/meta-arm"                   remote="yp"          revision="8aa8a1f17f5b64bc691544f989f04fc83df98adb" upstream="scarthgap"/>
-  <project name="meta-qt6"                   path="sources/meta-qt6"                   remote="qt"          revision="dc13e1bfda4a4757a08c2d6673bc4bac012c4a80" upstream="6.7.0" />
-  <project name="meta-browser"               path="sources/meta-browser"               remote="ossystems"   revision="dc31889c0899971def535dc1c040edf18bc16691" />
-  <project name="meta-security"              path="sources/meta-security"              remote="yp"          revision="11ea91192d43d7c2b0b95a93aa63ca7e73e38034" upstream="scarthgap"/>
-  <project name="meta-timesys"               path="sources/meta-timesys"               remote="timesys"     revision="b96d8de949939ad08094f71ed6ed4f88eaf41d5e" upstream="master"/>
-  <project name="meta-virtualization"        path="sources/meta-virtualization"        remote="yp"          revision="1a547c0aa0d75c4143cbb66de6e653d51cdc8bda" upstream="scarthgap"/>
+  <project name="meta-arm"                   path="sources/meta-arm"                   remote="yp"          revision="4112fda50b814ad6e3cfaefe5cad78a83114599a" upstream="master"/>
+  <project name="meta-qt6"                   path="sources/meta-qt6"                   remote="qt"          revision="3cd8b59a1303b3c079f5345c6b2555d1037925f6" upstream="6.11.0" />
+  <project name="meta-browser"               path="sources/meta-browser"               remote="ossystems"   revision="407e3ac990f5ed466cb76e5002f918860503799c" />
+  <project name="meta-security"              path="sources/meta-security"              remote="yp"          revision="c0d1d6200e7a84c39fb940cb1f22aad4b0b3d808" upstream="wrynose"/>
+  <project name="meta-timesys"               path="sources/meta-timesys"               remote="timesys"     revision="240d59556180ff72efbfd105393abdee544f7282" upstream="master"/>
+  <project name="meta-virtualization"        path="sources/meta-virtualization"        remote="yp"          revision="022f4356d4a9b389f51472d40a9330aa59f6bb9a" upstream="master"/>
 
-  <project name="meta-imx"                   path="sources/meta-imx"                   remote="imx"         revision="e06f8574e9abb3b98a60d5a8129d1ec4f79b4ca0" upstream="scarthgap-6.6.23-2.0.0">
+  <project name="meta-imx"                   path="sources/meta-imx"                   remote="imx"         revision="refs/tags/rel_imx_6.18.20_2.0.0"          upstream="wrynose-6.18.20-2.0.0">
      <linkfile src="tools/imx-setup-release.sh" dest="imx-setup-release.sh"/>
-     <linkfile src="README"                     dest="README-IMXBSP"/>
+     <linkfile src="README.md"                  dest="README-IMXBSP"/>
   </project>
-  <project name="meta-matter"                path="sources/meta-matter"                remote="imx"         revision="refs/tags/rel_imx_6.6.23-2.0.0"           upstream="imx_matter_2024_q1-post" />
-  <project name="meta-nxp-demo-experience"   path="sources/meta-nxp-demo-experience"   remote="imx-support" revision="refs/tags/rel_imx_6.6.23_2.0.0"           upstream="scarthgap-6.6.23-2.0.0" />
+  <project name="meta-nxp-connectivity"      path="sources/meta-nxp-connectivity"      remote="imx"         revision="refs/tags/rel_imx_6.18.20_2.0.0"          upstream="imx_matter_2026_q1-post" />
+  <project name="meta-nxp-demo-experience"   path="sources/meta-nxp-demo-experience"   remote="imx-support" revision="refs/tags/rel_imx_6.18.20_2.0.0"          upstream="wrynose-6.18.20-2.0.0" />
 
-  <project name="meta-swupdate"              path="sources/meta-swupdate"              remote="sbabic"      revision="1600c74ed6d9eabc15a680a7a4cb359aa537bd65" upstream="scarthgap"/>
-  <project name="meta-variscite-bsp-common"  path="sources/meta-variscite-bsp-common"  remote="variscite"   revision="672d282f4fb4389d5102f213da0996887608b3fb" upstream="scarthgap_6.6.23-2.0.0_var01"/>
-  <project name="meta-variscite-bsp-imx"     path="sources/meta-variscite-bsp-imx"     remote="variscite"   revision="fd1bc1d5fdf7338fe8e5c41ebe63eaff057c15c9" upstream="scarthgap_6.6.23-2.0.0_var01"/>
-  <project name="meta-variscite-hab"         path="sources/meta-variscite-hab"         remote="variscite"   revision="c07e5a34c3d4375b01b3df349532f7aebfb32a31" upstream="scarthgap_6.6.23-2.0.0_var01"/>
-  <project name="meta-variscite-sdk-common"  path="sources/meta-variscite-sdk-common"  remote="variscite"   revision="4e04623c9f7400a9330b654a62e0561be032a91a" upstream="scarthgap_6.6.23-2.0.0_var01"/>
-  <project name="meta-variscite-sdk-imx"     path="sources/meta-variscite-sdk-imx"     remote="variscite"   revision="da7e0bd164f42fe1449eebdddc487af6b3809433" upstream="scarthgap_6.6.23-2.0.0_var01">
+  <project name="meta-swupdate"              path="sources/meta-swupdate"              remote="sbabic"      revision="c0658455606b3a37d85d7cf03703d8b8d2ead667" upstream="wrynose"/>
+  <project name="meta-mender"                path="sources/meta-mender"                remote="mender"      revision="acc45e431e1aa6360a78c182a8c2578bd43af990" upstream="wrynose"/>
+  <project name="meta-variscite-bsp-common"  path="sources/meta-variscite-bsp-common"  remote="variscite"   revision="233fda88218170ad059f085c89c3620b686dafed" upstream="wrynose_var01"/>
+  <project name="meta-variscite-bsp-imx"     path="sources/meta-variscite-bsp-imx"     remote="variscite"   revision="231407cd24f390b610f6b5853280c168d1ac4be0" upstream="wrynose_6.18.20_2.0.0_var01"/>
+  <project name="meta-variscite-hab"         path="sources/meta-variscite-hab"         remote="variscite"   revision="84c982942b4e41755cd93f1c34c33498c8e7a2d9" upstream="wrynose_var01"/>
+  <project name="meta-variscite-sdk-common"  path="sources/meta-variscite-sdk-common"  remote="variscite"   revision="69cf053f7c427b151cd0e5e86b91b73e1dacc270" upstream="wrynose_var01"/>
+  <project name="meta-variscite-sdk-imx"     path="sources/meta-variscite-sdk-imx"     remote="variscite"   revision="0b4c38c1fd1acf726ce0c1e6d7e7a49880f69bf4" upstream="wrynose_6.18.20_2.0.0_var01">
     <linkfile src="scripts/var-setup-release.sh" dest="var-setup-release.sh"/>
   </project>
-  <project name="variscite-bsp-base"         path="sources/base"                       remote="variscite"   revision="34ecb086784cd8dcae25db9f3adf4cfbe19491f1" upstream="scarthgap_6.6.23-2.0.0_var01">
+  <project name="variscite-bsp-base"         path="sources/base"                       remote="variscite"   revision="11467a97e4896f7c6f901be06c061093614603b5" upstream="wrynose_var01">
     <linkfile src="setup-environment" dest="setup-environment"/>
     <linkfile src="README"            dest="README"/>
     <linkfile src="scripts/var-start-container.sh"            dest="var-start-container.sh"/>
   </project>
-  <project name="var-host-docker-containers" path="sources/var-host-docker-containers" remote="variscite"   revision="fc27a5d9b6ef7facab50ebf27af18ae6269b0c4d" upstream="master"/>
+  <project name="var-host-docker-containers" path="sources/var-host-docker-containers" remote="variscite"   revision="ffaea38c5e3b39151c5e89b043016168144c7d91" upstream="master"/>
   <!-- Variscite - End -->
 
   <!-- Hach Platform - Start -->
 
   <!-- meta-python-ai layer -->
   <remote name="pythonAI" fetch="https://github.com/zboszor"/>
-  <project remote="pythonAI" revision="scarthgap" name="meta-python-ai"     path="sources/meta-python-ai"></project>
-  <project remote="pythonAI" revision="scarthgap" name="meta-clang-revival" path="sources/meta-clang-revival"></project>
+  <project remote="pythonAI" revision="wrynose" name="meta-python-ai"     path="sources/meta-python-ai"></project>
+  <project remote="pythonAI" revision="wrynose" name="meta-clang-revival" path="sources/meta-clang-revival"></project>
 
   <!-- meta iot layer (for Azure SDK) -->
   <remote name="IntelIOT" fetch="https://github.com/intel-iot-devkit"/>
-  <project remote="IntelIOT" revision="7e8ce5ed80fd950d09cb9f78ee039c3c35f2bcff" name="meta-iot-cloud" path="sources/meta-iot-cloud"></project>
+  <project remote="IntelIOT" revision="cd367a5b35872e12b29ea7473ea79ee54688705d" name="meta-iot-cloud" path="sources/meta-iot-cloud"></project>
 
   <!-- meta rtlwifi layer (USB WIFI support), https://layers.openembedded.org/layerindex/branch/master/layer/meta-rtlwifi -->
   <remote name="rtlWifi" fetch="https://github.com/EmbeddedAndroid"/>
-  <project remote="rtlWifi" revision="6cef327d783b36fcec52af4681ef49c9412a20d1" name="meta-rtlwifi" path="sources/meta-rtlwifi"></project>
+  <project remote="rtlWifi" revision="19a8f2888f38b59641991979a4c25172fa4915e2" name="meta-rtlwifi" path="sources/meta-rtlwifi"></project>
 
   <!-- meta cycloneDX layer (CycloneDX compliant SBOMs), https://layers.openembedded.org/layerindex/branch/master/layer/meta-cyclonedx -->
   <remote name="cyclone"  fetch="https://github.com/HachCompany-Common"/>
-  <project remote="cyclone" revision="4854933e0850172c7d6115eb139af331127748de" name="meta-cyclonedx" path="sources/meta-cyclonedx" upstream="scarthgap"></project>
+  <project remote="cyclone" revision="a2665ebc20656d1a0dec40fba7fa81c382caa305" name="meta-cyclonedx" path="sources/meta-cyclonedx" upstream="wrynose"></project>
 
   <!-- Hach HEC Platform - End -->
 </manifest>
