@@ -65,8 +65,8 @@
 
   <!-- meta-python-ai layer -->
   <remote name="pythonAI" fetch="https://github.com/zboszor"/>
-  <project remote="pythonAI" revision="wrynose" name="meta-python-ai"     path="sources/meta-python-ai"></project>
-  <project remote="pythonAI" revision="wrynose" name="meta-clang-revival" path="sources/meta-clang-revival"></project>
+  <project remote="pythonAI" revision="80ab573f1ae763ba9a471dd5701ecd56f9c403cf" name="meta-python-ai"     path="sources/meta-python-ai"></project>
+  <project remote="pythonAI" revision="5fc4796ae293929a79b7fd0dd0804f1545a152ed" name="meta-clang-revival" path="sources/meta-clang-revival"></project>
 
   <!-- meta iot layer (for Azure SDK) -->
   <remote name="IntelIOT" fetch="https://github.com/intel-iot-devkit"/>
