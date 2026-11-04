@@ -77,8 +77,11 @@
   <project remote="rtlWifi" revision="19a8f2888f38b59641991979a4c25172fa4915e2" name="meta-rtlwifi" path="sources/meta-rtlwifi"></project>
 
   <!-- meta cycloneDX layer (CycloneDX compliant SBOMs), https://layers.openembedded.org/layerindex/branch/master/layer/meta-cyclonedx -->
-  <remote name="cyclone"  fetch="https://github.com/HachCompany-Common"/>
-  <project remote="cyclone" revision="a2665ebc20656d1a0dec40fba7fa81c382caa305" name="meta-cyclonedx" path="sources/meta-cyclonedx" upstream="wrynose"></project>
+  <remote name="hach-common"  fetch="https://github.com/HachCompany-Common"/>
+  <project remote="hach-common" revision="a2665ebc20656d1a0dec40fba7fa81c382caa305" name="meta-cyclonedx" path="sources/meta-cyclonedx" upstream="wrynose"></project>
+
+  <!-- meta noto layer (Noto fonts), Hach fork of https://github.com/ssfivy/meta-noto -->
+  <project remote="hach-common" revision="16e8bb15d73cd94b4e7eff81dbd8bca5bd34480a" name="meta-noto" path="sources/meta-noto" upstream="wrynose"></project>
 
   <!-- Hach HEC Platform - End -->
 </manifest>
