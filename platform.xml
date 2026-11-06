@@ -83,5 +83,10 @@
   <!-- meta noto layer (Noto fonts), Hach fork of https://github.com/ssfivy/meta-noto -->
   <project remote="hach-common" revision="16e8bb15d73cd94b4e7eff81dbd8bca5bd34480a" name="meta-noto" path="sources/meta-noto" upstream="wrynose"></project>
 
+  <!-- meta-webkit layer (WPE WebKit), https://github.com/Igalia/meta-webkit. Pinned to the commit for WPE WebKit
+       2.54.2; wrynose-latest is the branch that carries the current WebKit stable series. -->
+  <remote name="igalia" fetch="https://github.com/Igalia"/>
+  <project remote="igalia" revision="0e07a1ab71d42ce54b614980a4af8f90ab58428a" name="meta-webkit" path="sources/meta-webkit" upstream="wrynose-latest"></project>
+
   <!-- Hach HEC Platform - End -->
 </manifest>
